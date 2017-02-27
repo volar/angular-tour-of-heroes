@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-export class Hero {
-	id: number;
-	name: string;
-}
+import { Hero } from './hero';
 
 export const HEROES: Hero[] = [
     { id: 11, name: 'Mr. Nice' },
@@ -17,6 +13,7 @@ export const HEROES: Hero[] = [
     { id: 19, name: 'Magma' },
     { id: 20, name: 'Tornado' }
 ];
+
 
 @Component({
   selector: 'app-root',
