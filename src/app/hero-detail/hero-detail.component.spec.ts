@@ -1,9 +1,10 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { DebugElement, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail.component';
+import { Hero } from './../hero';
 
 describe('HeroDetailComponent', () => {
   let component: HeroDetailComponent;
@@ -11,7 +12,8 @@ describe('HeroDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroDetailComponent ]
+      declarations: [ HeroDetailComponent ],
+      imports: [FormsModule]
     })
     .compileComponents();
   }));
