@@ -5,18 +5,32 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroService } from './hero.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { FaceRecognitionComponent } from './face-recognition/face-recognition.component';
+import { ImageUploadModule   } from 'angular2-image-upload';
+import { ImageService } from 'angular2-image-upload/lib/image.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroesComponent,
+    DashboardComponent,
+    FaceRecognitionComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    ImageUploadModule
   ],
-  providers: [],
+  providers: [HeroService, ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

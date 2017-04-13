@@ -1,19 +1,19 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { AppComponent } from './../app.component';
+import { HeroDetailComponent } from './../hero-detail/hero-detail.component';
+import { FormsModule } from '@angular/forms';
+import { Hero } from './../hero';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ ],
+      imports: [ FormsModule ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeroDetailComponent
       ],
-      providers: [HeroService]
     });
     TestBed.compileComponents();
   });
